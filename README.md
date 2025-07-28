@@ -114,6 +114,29 @@ A modern Neovim configuration built on [LazyVim](https://github.com/LazyVim/Lazy
 #### Terminal
 - `<C-``>` - Toggle terminal
 
+#### VS Code-Style Keymaps (macOS - Conflict-Free)
+
+**Cmd Key Shortcuts (System-Safe):**
+- `Cmd+Click` - Go to definition (function redirection)
+- `Cmd+Shift+F` - Find files
+- `Cmd+Shift+P` - Command palette (live grep)
+- `Cmd+B` - Toggle file explorer
+- `Cmd+/` - Toggle comments
+
+**Alt/Option Key Shortcuts (Avoiding System Conflicts):**
+- `Alt+S` - Save file
+- `Alt+Shift+S` - Save all files
+- `Alt+N` - New file
+- `Alt+W` - Close buffer
+- `Alt+Z` - Undo
+- `Alt+Shift+Z` - Redo
+- `Alt+X/C/V` - Cut/Copy/Paste (system clipboard)
+- `Alt+F` - Search
+- `Alt+R` - Replace
+- `Alt+1-9` - Switch to window 1-9
+
+**Note:** These keymaps are designed to avoid conflicts with macOS system shortcuts like `Cmd+P` (print), `Cmd+S` (save dialog), `Cmd+N` (new window), etc.
+
 ### Plugin Management
 - `:Lazy` - Open plugin manager
 - `:Lazy sync` - Install/update plugins

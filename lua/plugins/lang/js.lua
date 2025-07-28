@@ -41,23 +41,6 @@ return {
     },
   },
 
-  -- Treesitter for better syntax highlighting
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, {
-          "javascript",
-          "typescript",
-          "tsx",
-          "jsdoc",
-          "json",
-          "jsonc",
-        })
-      end
-    end,
-  },
-
   -- Auto-close tags for JSX/TSX
   {
     "windwp/nvim-ts-autotag",

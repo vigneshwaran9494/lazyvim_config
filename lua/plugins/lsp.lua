@@ -4,7 +4,7 @@ return {
       "williamboman/mason.nvim",
       opts = {
         ensure_installed = {
-          "tsserver",
+          "typescript-language-server", -- Changed from "tsserver"
           "eslint",
           "tailwindcss",
           "jsonls",
