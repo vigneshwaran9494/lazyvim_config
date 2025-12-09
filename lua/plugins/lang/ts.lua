@@ -1,10 +1,9 @@
 return {
-  -- TypeScript specific configurations
+  -- Enhanced TypeScript specific configurations
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- Enhanced TypeScript LSP
         tsserver = {
           settings = {
             typescript = {
@@ -67,70 +66,9 @@ return {
               implementationsCodeLens = true,
               referencesCodeLens = true,
               referencesCodeLensOnAllFunctions = true,
-              suggest = {
-                includeCompletionsForModuleExports = true,
-                includeCompletionsWithSnippetText = true,
-                includeCompletionsWithInsertText = true,
-                includeCompletionsWithReplaceText = true,
-                includeCompletionsWithClassMemberSnippets = true,
-                includeCompletionsWithObjectLiteralMethodSnippets = true,
-                includeCompletionsWithFunctionParameterSnippets = true,
-                includeCompletionsWithJSDocCommentSnippets = true,
-                includeCompletionsWithImportStatementSnippets = true,
-                includeCompletionsWithThisPropertySnippets = true,
-                includeCompletionsWithThisFunctionSnippets = true,
-                includeCompletionsWithThisMethodSnippets = true,
-                includeCompletionsWithThisConstructorSnippets = true,
-                includeCompletionsWithThisParameterSnippets = true,
-                includeCompletionsWithThisVariableSnippets = true,
-                includeCompletionsWithThisPropertyAccessSnippets = true,
-                includeCompletionsWithThisMethodCallSnippets = true,
-                includeCompletionsWithThisConstructorCallSnippets = true,
-                includeCompletionsWithThisParameterCallSnippets = true,
-                includeCompletionsWithThisVariableCallSnippets = true,
-              },
-            },
-            javascript = {
-              inlayHints = {
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayEnumMemberValueHints = true,
-                includeInlayOptionalParameterHints = true,
-                includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-                includeInlayFunctionLikeReturnTypeHintsSingleLine = false,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayVariableTypeHintsWhenTypeCollidesWithName = false,
-              },
-              suggest = {
-                includeCompletionsForModuleExports = true,
-                includeCompletionsWithSnippetText = true,
-                includeCompletionsWithInsertText = true,
-                includeCompletionsWithReplaceText = true,
-                includeCompletionsWithClassMemberSnippets = true,
-                includeCompletionsWithObjectLiteralMethodSnippets = true,
-                includeCompletionsWithFunctionParameterSnippets = true,
-                includeCompletionsWithJSDocCommentSnippets = true,
-                includeCompletionsWithImportStatementSnippets = true,
-                includeCompletionsWithThisPropertySnippets = true,
-                includeCompletionsWithThisFunctionSnippets = true,
-                includeCompletionsWithThisMethodSnippets = true,
-                includeCompletionsWithThisConstructorSnippets = true,
-                includeCompletionsWithThisParameterSnippets = true,
-                includeCompletionsWithThisVariableSnippets = true,
-                includeCompletionsWithThisPropertyAccessSnippets = true,
-                includeCompletionsWithThisMethodCallSnippets = true,
-                includeCompletionsWithThisConstructorCallSnippets = true,
-                includeCompletionsWithThisParameterCallSnippets = true,
-                includeCompletionsWithThisVariableCallSnippets = true,
-              },
             },
           },
         },
-        -- ESLint for TypeScript projects
         eslint = {
           settings = {
             workingDirectory = { mode = "auto" },

@@ -1,24 +1,19 @@
 return {
-    -- React/JSX/TSX support
+    -- React/JSX/TSX support (including Next.js)
     {
       "windwp/nvim-ts-autotag",
-      ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+      ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "javascript.jsx" },
       opts = {},
     },
   
-    -- Tailwind CSS
+    -- Completion (using blink.cmp instead of nvim-cmp)
     {
-      "hrsh7th/nvim-cmp",
-      opts = function(_, opts)
-        local cmp = require("cmp")
-        opts.sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
-          { name = "tailwindcss" },
-        })
-      end,
+      "saghen/blink.cmp",
+      opts = {
+        sources = {
+          default = { "lsp", "path", "snippets", "buffer", "tailwindcss", "emmet" },
+        },
+      },
     },
     {
       "roobert/tailwindcss-colorizer-cmp.nvim",
