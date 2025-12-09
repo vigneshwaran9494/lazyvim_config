@@ -14,7 +14,7 @@ A modern Neovim configuration built on [LazyVim](https://github.com/LazyVim/Lazy
 
 ###  Development Tools
 - **LSP Support**: Full Language Server Protocol integration
-- **Code Completion**: Intelligent autocompletion with nvim-cmp
+- **Code Completion**: Fast and modern completion with blink.cmp
 - **Syntax Highlighting**: Enhanced with nvim-treesitter
 - **Code Formatting**: Automatic formatting with conform.nvim
 - **Linting**: Real-time linting with nvim-lint
@@ -24,7 +24,7 @@ A modern Neovim configuration built on [LazyVim](https://github.com/LazyVim/Lazy
 
 #### JavaScript/TypeScript
 - **Enhanced LSP**: TypeScript and JavaScript language server
-- **ESLint Integration**: Code linting and formatting
+- **ESLint**: Local ESLint integration (configured per project)
 - **Prettier**: Code formatting
 - **JSX/TSX Support**: Auto-closing tags and syntax highlighting
 - **Testing**: Jest integration with neotest
@@ -32,7 +32,7 @@ A modern Neovim configuration built on [LazyVim](https://github.com/LazyVim/Lazy
 
 #### Web Development
 - **React/JSX**: Full React development support
-- **Tailwind CSS**: Intelligent CSS class completion
+- **Tailwind CSS**: Intelligent CSS class completion and LSP
 - **HTML/CSS**: Enhanced syntax highlighting and formatting
 - **JSON Support**: JSON and JSONC file handling
 
@@ -81,10 +81,7 @@ A modern Neovim configuration built on [LazyVim](https://github.com/LazyVim/Lazy
 
 3. **Install dependencies**:
    ```bash
-   # Install eslint_d for JavaScript/TypeScript linting
-   npm install -g eslint_d
-   
-   # Install Prettier for code formatting
+   # Install Prettier for code formatting (optional)
    npm install -g prettier
    ```
 
@@ -174,15 +171,23 @@ lua/plugins/
 - **Dependency Injection**: DI container support
 - **Module Navigation**: Quick module navigation
 
+## 🛠️ Current LSP Servers
+
+The following language servers are installed via Mason:
+
+- **TypeScript Language Server** - JavaScript/TypeScript support
+- **Tailwind CSS Language Server** - CSS class completion and validation
+- **JSON Language Server** - JSON file support
+- **HTML Language Server** - HTML support
+- **CSS Language Server** - CSS support
+- **Emmet Language Server** - HTML/CSS snippets and expansion
+- **Prisma Language Server** - Database schema support
+
+**Note**: ESLint is handled locally per project rather than through a global LSP server for better compatibility.
+
 ## 🔍 Troubleshooting
 
 ### Common Issues
-
-#### ESLint Errors
-If you encounter `ENOENT: no such file or directory` for `eslint_d`:
-```bash
-npm install -g eslint_d
-```
 
 #### Plugin Installation
 If plugins fail to install:
