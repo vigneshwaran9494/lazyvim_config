@@ -11,7 +11,7 @@ return {
       "saghen/blink.cmp",
       opts = {
         sources = {
-          default = { "lsp", "path", "snippets", "buffer", "tailwindcss", "emmet" },
+          default = { "lsp", "path", "snippets", "buffer" },
         },
       },
     },
